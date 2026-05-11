@@ -4,6 +4,7 @@ logs/
 node_modules/
 vendor/
 backups/
+uploads/
 temp/
 *.zip
 *.rar
@@ -16,3 +17,7 @@ temp/
 *.txt
 *.docx
 *.md
+assets/**
+uploads/**
+1/assets/**
+1/uploads/**
