@@ -1,0 +1,80 @@
+
+.content-wrapper {
+    margin-right: 250px !important;
+    margin-left: 0px !important;
+}
+
+.main-footer{
+    margin-right: 250px !important;
+    margin-left: 0px !important;
+}
+
+.nav-sidebar .nav-link > .right, .nav-sidebar .nav-link > p > .right {
+    position: absolute;
+    right: 14rem !important;
+    left: 1rem !important;
+    top: .7rem;
+}
+
+.main-header {
+    transition: right 0.3s ease-in-out;
+    margin-right: 250px;
+}
+
+.sidebar-collapse .main-sidebar, .sidebar-collapse .main-sidebar::before {
+    margin-right: -250px !important;
+}
+
+
+@media (max-width: 767.98px){
+    .content-wrapper {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .content-wrapper, .content-wrapper::before, .main-footer, .main-footer::before, .main-header, .main-header::before {
+        margin-right: 0 !important;
+    }
+
+    .main-header {
+        margin-right: 0px !important;
+    }   
+
+    .content-wrapper > .content {
+        padding: 15px 0rem !important
+    }
+    .sidebar-mini.sidebar-collapse .main-sidebar {
+        display: none;
+    }
+
+}
+
+
+.custom-switch {
+    padding-right: 3.25rem !important;
+}
+
+[class*=icheck-]>input:first-child+input[type=hidden]+label::before, [class*=icheck-]>input:first-child+label::before {
+    content: "";
+    display: inline-block;
+    position: relative !important;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #D3CFC8;
+    border-radius: 0;
+    margin-left: 5px !important;
+}
+
+.pricing-table .pricing-features .feature {
+    font-size: 15px;
+    color: #666;
+    display: block;
+    text-align: right !important;
+    width: 100%;
+    margin: 10px auto;
+    font-weight: 500;
+}
+
+.hide{
+    display: none;
+}
