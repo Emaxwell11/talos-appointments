@@ -1,0 +1,7 @@
+.git
+node_modules
+backups
+*.zip
+*.rar
+docs
+assets/large_videos
