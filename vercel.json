@@ -3,31 +3,18 @@
   "builds": [
     {
       "src": "index.php",
-      "use": "vercel-php@0.9.0"
+      "use": "vercel-php@0.9.0",
+      "config": { "maxLambdaSize": "300mb" }
     },
     {
-      "src": "assets/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "uploads/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "1/**",
+      "src": "static/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
-    { "src": "/1/(.*)", "dest": "/1/$1" },
-    { "src": "/(.*)", "dest": "/index.php" }
-  ],
-  "functions": {
-    "index.php": {
-      "runtime": "vercel-php@0.9.0",
-      "maxDuration": 60
+    {
+      "src": "/(.*)",
+      "dest": "/index.php"
     }
-  }
+  ]
 }
