@@ -99,6 +99,10 @@ switch (ENVIRONMENT)
  */
 $system_path = 'system';
 
+// Force absolute path for Vercel / serverless environments
+if (!is_dir($system_path)) {
+    $system_path = __DIR__ . DIRECTORY_SEPARATOR . 'system';
+}
 /*
  *---------------------------------------------------------------
  * APPLICATION DIRECTORY NAME
@@ -185,6 +189,7 @@ $view_folder = '';
 // --------------------------------------------------------------------
 
 /*
+ /*
  * ---------------------------------------------------------------
  *  Resolve the system path for increased reliability
  * ---------------------------------------------------------------
@@ -194,6 +199,11 @@ $view_folder = '';
 if (defined('STDIN'))
 {
 	chdir(dirname(__FILE__));
+}
+
+// Make system path absolute (critical for Vercel)
+if (strpos($system_path, DIRECTORY_SEPARATOR) === false) {
+    $system_path = __DIR__ . DIRECTORY_SEPARATOR . $system_path;
 }
 
 if (($_temp = realpath($system_path)) !== FALSE)
