@@ -3,24 +3,20 @@
   "builds": [
     {
       "src": "index.php",
-      "use": "vercel-php@0.9.0"
-    },
-    {
-      "src": "assets/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "uploads/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "1/**",
-      "use": "@vercel/static"
+      "use": "vercel-php@0.9.0",
+      "config": {
+        "includeFiles": [
+          "system/**",
+          "application/**",
+          "1/**",
+          "assets/**",
+          "vendor/**"
+        ]
+      }
     }
   ],
   "routes": [
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
     { "src": "/1/(.*)", "dest": "/1/$1" },
     { "src": "/(.*)", "dest": "/index.php" }
   ]
