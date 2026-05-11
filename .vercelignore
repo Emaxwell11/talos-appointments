@@ -17,7 +17,3 @@ temp/
 *.txt
 *.docx
 *.md
-assets/**
-uploads/**
-1/assets/**
-1/uploads/**
